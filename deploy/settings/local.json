@@ -1,0 +1,18 @@
+{
+    "roledefs": {
+        "app": [
+            "ubuntu@localhost:2900"
+        ]
+    },
+    "app": {
+        "name": "weather.api",
+        "user": "weatherapi",
+        "server_name": "local.test",
+        "env": "dev",
+        "path": "/opt/weather.api/",
+        "repo": "git@bitbucket.org:aledev/weather.api.git",
+        "nginx_port": 80,
+        "ports": [8001, 8002, 8003, 8004]
+    }
+
+}

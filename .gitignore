@@ -1,0 +1,16 @@
+*.pyc
+workspace.xml
+cover/
+.coverage
+*~
+.idea/*
+env/
+.projectile
+weatherapi/settings/local.py
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+weatherapi/settings/local.py

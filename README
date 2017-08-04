@@ -1,0 +1,15 @@
+La idea es tener una API que obtenga datos del tiempo del servicio de open weather map (OWM) para mostrar sobre un mapa.
+
+Como parametro le paso un bounding box (bbox, un area) y me devuelve el estado de todas las estaciones de clima que encuentre en ese area. 
+Para definir el bbox le paso las coordenada SW (sur-oeste) y la coordenada NE (nor-este)
+
+OWM tiene un endpoint donde puedo obtener los datos dentro de un bbox que le paso como parametro.
+Ademas de bbox tambien recibe como parametro el zoom el cual me define la densidad de estaciones que va a mostrar.
+Hay 3 niveles de zoom Pais->estado->ciudad (por poner un nombre)
+
+Basicamente este servicio es como un proxy de OWM donde podemos cachear las llamadas y controlar el uso del servicio  de OWM.
+
+Para cachear las llamadas a OWM se utiliza una grilla. Hay una grilla por cada nivel de zoom.
+Para generar las grillas usamos Geohash (https://en.wikipedia.org/wiki/Geohash) y cada nivel de zoom corresponde a un nivel de precision de Geohash.
+
+
