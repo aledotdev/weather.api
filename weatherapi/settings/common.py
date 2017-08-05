@@ -7,4 +7,4 @@ DEBUG = False
 OWM_HTTP_CLIENT_CONN = 5
 OWM_REQUEST_TIMEOUT = 5
 OWM_CONN_TIMEOUT = 3
-OWM_ICON_URL = "http://example.com/images"
+OWM_ICON_URL = "http://openweathermap.org/img/w/"

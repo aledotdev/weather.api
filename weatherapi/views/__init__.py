@@ -112,7 +112,11 @@ class RedisCacheManager(object):
             if v is None:
                 data.append(None)
             else:
-                data.append(json.loads(v))
+                try:
+                    data.append(json.loads(v))
+                except Exception as e:
+                    import ipdb; ipdb.set_trace()
+
         return data
 
     @gen.coroutine
